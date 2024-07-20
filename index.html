@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #050404;
+            background-image: url('pexels-danielabsi-952670.jpg');
+        }
+        .container {
+            background: #696969;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+        .container label{
+            color: white;
+        }
+        h1 {
+            margin-bottom: 1em;
+            color: white;
+        }
+        label {
+            display: block;
+            margin-bottom: .5em;
+        }
+        input, textarea {
+            width: 100%;
+            padding: .5em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: .7em;
+            border: none;
+            background:#0056b3  ;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #002E63;
+        }
+        
+         
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Send an Email</h1>
+        <form action="/send-email" method="post">
+            <label for="to">To:</label>
+            <input type="email" id="to" name="to" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Send Email</button>
+        </form>
+    </div>
+</body>
+</html>
